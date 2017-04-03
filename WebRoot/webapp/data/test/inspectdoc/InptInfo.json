@@ -1,0 +1,13 @@
+{
+	"success": true,
+	"total": 1,
+	"results": [
+		
+		{ "id": 1, "inptname": "张三",  "inptgender": "男","inptold": 20,"inptbedNum": "J001","inptRFIDNum": "rf069","inptinjtype": "外伤","inptinjlevel": "重度","inptinjtime": "2015/01/20","inptinjaddr": "uh1","inptIsFinish": "待检查","inptimgsrc":"resource/img/malein3.png",
+		  "clinicaldepart":"放射科","preresult":"hhf","sampletype":"ddf","reqdoc":"李医生","reqcontent":"化验","examdepart":"dsd","reporter":"王五","verifier":"李四"
+		
+		
+		}
+		
+	],
+}

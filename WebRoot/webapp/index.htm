@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!--
+  ,                          .
+  \`      ,/\     |''-\                  |
+   |`-.  ,' |   | |_,.'  _,.   . `.+-. _.+\    , ,__   Y...
+   |  `. |   | '| | `\  /  A   \  `| \ | | |  \| |  |   |  |
+   |   `'    |  P '|  \ "- \   |  ) ' \Y  \   | |_,'  .+-'
+                                                        |
+                                                         |
+                                                         |
+                                                         \
+                                                          |
+                                                          |
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>应急救援移动医疗信息管理系统Web工作站</title>
+<link rel="shortcut icon" href="img/logo.png" />
+<!--[if IE 6]> <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script> <![endif]-->
+
+<link type="text/css" rel="stylesheet" href="extjs/resources/css/ext-all.css" />
+<link type="text/css" rel="stylesheet" href="wj-css.css">
+
+<style>
+
+/*.x-panel-body-default{
+	background-color: #ccc;
+}*/
+
+/*.x-panel-body{
+    background-color: #ccc;
+}*/
+
+</style>
+
+<script type="text/javascript">
+	var debugging = false;
+	if (!debugging && typeof console == "undefined")
+		var console = {
+			log : function() { /* do nothing */ },
+			warn : function() { /* do nothing */ }
+		};
+</script>
+
+<script type="text/javascript" src="PinYin.js"></script>
+<script type="text/javascript" src="extjs/ext-all-dev.js"></script>
+<!-- 2016年4月8日10:43:25新增    使用exporter进行文档导出-->
+<script type="text/javascript" src="extjs/src/ux/exporter/downloadify.min.js"></script>
+<script type="text/javascript" src="extjs/src/ux/exporter/swfobject.js"></script>
+<script type="text/javascript" src="extjs/src/ux/exporter/Base64.js"></script>
+<script type="text/javascript" src="extjs/src/ux/exporter/Exporter.js"></script>
+<script type="text/javascript" src="extjs/src/ux/exporter/Button.js"></script>
+
+
+<!-- 2016年5月8日21:34:53    2016年5月11日19:46:02使用word文档导出-->
+<script type="text/javascript" src="DocMode/docmode.js"></script>
+<script type="text/javascript" src="DocMode/JsonPtInfo.js"></script>
+<!-- 
+<script type="text/javascript" src="view/exportfile/ExportDisaReport.js"></script>
+-->
+<script>
+	Ext.apply(Ext.data.SortTypes, {
+		asString : function(value) {
+			// expects an object with a first and last name property
+			var result = Pinyin.get(value);
+			return result;
+		}
+	});
+
+	Ext.define('model', {
+		extend : 'Ext.data.Model',
+		fields : [ {
+			name : 'DESCR',
+			sortType : 'asString'
+		} ]
+	});
+	
+	Ext.data.Store.prototype.applySort = function() {
+		if (this.sortInfo && !this.remoteSort) {
+			var s = this.sortInfo, f = s.field;
+			var st = this.fields.get(f).sortType;
+			var fn = function(r1, r2) {
+				console.log('new sort!!!!');
+				var v1 = st(r1.data[f]), v2 = st(r2.data[f]);
+				if (typeof (v1) == 'string') {
+					return v1.localCompare(v2);
+				}
+				return v1 > v2 ? 1 : (v1 < v2 ? -1 : 0);
+			};
+			this.data.sort(s.direction, fn);
+			if (this.snapshot && this.snapshot != this.data) {
+				this.snapshot.sort(s.direction, fn);
+			}
+		}
+	};
+	
+</script>
+
+<script type="text/javascript" src="extjs/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+</head>
+<body>
+</body>
+</html>

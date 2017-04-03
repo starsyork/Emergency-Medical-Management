@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 3,
+	"results": [
+		{ "id": 1, "name": "u1", "number": "123", "zone": "erw", "time": "转院" ,"degree":"ss","Proc":"ss"},
+		{ "id": 2, "name": "u2", "number": "2", "zone": "erw", "time": "转院" ,"degree":"ss","Proc":"ss"},
+		{ "id": 3, "name": "u3", "number": "3", "zone": "erw", "time": "转院" ,"degree":"ss","Proc":"ss"},
+	],
+}

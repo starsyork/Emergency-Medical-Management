@@ -1,0 +1,14 @@
+{
+	"success": true,
+	"total": 8,
+	"results": [
+		{ "id": 1, "inptname": "张三",  "inptgender": "男","inptold": 20,"inptbedNum": "J001","inptRFIDNum": "rf069","inptinjtype": "外伤","inptinjlevel": "重度","inptinjtime": "2015/01/20","inptinjaddr": "uh1","inptIsFinish": "待检查","inptimgsrc":"resource/img/malein3.png"},
+		{ "id": 2, "inptname": "张五三", "inptgender": "女","inptold": 30,"inptbedNum": "J002","inptRFIDNum": "rf509","inptinjtype": "内伤","inptinjlevel": "中度","inptinjtime": "2015/03/23","inptinjaddr": "uh2","inptIsFinish": "待检查","inptimgsrc":"resource/img/femalein2.png" },
+		{ "id": 3, "inptname": "张分三", "inptgender": "男","inptold": 21,"inptbedNum": "J003","inptRFIDNum": "rf309","inptinjtype": "内伤","inptinjlevel": "重度","inptinjtime": "2015/04/20","inptinjaddr": "uh3","inptIsFinish": "待检查","inptimgsrc":"resource/img/malein3.png" },
+		{ "id": 4, "inptname": "张时三", "inptgender": "女","inptold": 20,"inptbedNum": "J004","inptRFIDNum": "rf019","inptinjtype": "外伤","inptinjlevel": "轻度","inptinjtime": "2012/03/20","inptinjaddr": "uh4","inptIsFinish": "待检查","inptimgsrc":"resource/img/femalein1.png" },
+		{ "id": 5, "inptname": "张为三", "inptgender": "男","inptold": 21,"inptbedNum": "J005","inptRFIDNum": "rf069","inptinjtype": "外伤","inptinjlevel": "中度","inptinjtime": "2015/03/20","inptinjaddr": "uh5","inptIsFinish": "待检查","inptimgsrc":"resource/img/malein2.png" },
+		{ "id": 6, "inptname": "张非三", "inptgender": "男","inptold": 22,"inptbedNum": "J006","inptRFIDNum": "rf109","inptinjtype": "外伤","inptinjlevel": "死亡","inptinjtime": "2016/03/20","inptinjaddr": "uh6","inptIsFinish": "待检查","inptimgsrc":"resource/img/malein4.png" },
+		{ "id": 7, "inptname": "张及三", "inptgender": "女","inptold": 27,"inptbedNum": "J007","inptRFIDNum": "rf029","inptinjtype": "外伤","inptinjlevel": "中度","inptinjtime": "2015/04/10","inptinjaddr": "uh7","inptIsFinish": "待检查","inptimgsrc":"resource/img/femalein2.png" },
+		{ "id": 8, "inptname": "张寄三", "inptgender": "男","inptold": 23,"inptbedNum": "J008","inptRFIDNum": "rf039","inptinjtype": "外伤","inptinjlevel": "轻度","inptinjtime": "2015/07/20","inptinjaddr": "uh8","inptIsFinish": "待检查","inptimgsrc":"resource/img/malein1.png" },
+	],
+}

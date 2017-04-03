@@ -1,0 +1,20 @@
+{
+	"success": true,
+	"total": 14,
+	"results": [
+		{ "id": 1, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 2, "type": "临时医嘱", "content": "注射用水", "startTime": "2013/01/20 03:20", "state": "未执行", "spec": "" , "dose": "2ml" , "usage": "", "frequency": "1" },
+		{ "id": 3, "type": "临时医嘱", "content": "注射用水", "startTime": "2013/01/20 03:20", "state": "已执行", "spec": "" , "dose": "2ml" , "usage": "", "frequency": "1" },
+		{ "id": 4, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/11 03:20", "state": "已停止", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 5, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/11 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 6, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/11 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 7, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 8, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 9, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 10, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 11, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 12, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 13, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+		{ "id": 14, "type": "长期医嘱", "content": "神经生长因子", "startTime": "2013/01/20 03:20", "endTime": "2013/11/20 03:20", "state": "有效", "spec": "" , "dose": "30ug" , "usage": "肌肉注射", "frequency": "10" },
+	],
+}

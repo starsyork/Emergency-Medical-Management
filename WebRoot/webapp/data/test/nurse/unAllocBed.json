@@ -1,0 +1,15 @@
+{
+	"success": true,
+	"total": 10,
+	"results": [
+		{ "bedNum": 10 },
+		{ "bedNum": 11 },
+		{ "bedNum": 12 },
+		{ "bedNum": 13 },
+		{ "bedNum": 14 },
+		{ "bedNum": 15 },
+		{ "bedNum": 16 },
+		{ "bedNum": 17 },
+		{ "bedNum": 18 },
+	]
+}

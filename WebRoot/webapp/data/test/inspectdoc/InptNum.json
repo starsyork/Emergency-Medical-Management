@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 1,
+	"results": [
+		{"id":1,"inptLInjNum":10,"inptMInjNum": 5, "inptSInjNum": 20, "inptDeath": 10}
+	
+		
+	],
+}

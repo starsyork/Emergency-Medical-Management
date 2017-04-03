@@ -1,0 +1,11 @@
+{
+	"success": true,
+	"total": 5,
+	"results": [
+		{ "secName": "重症监护区" ,"name": "黑妞" ,"wound": 33,"heal": 33,"total": 3 },
+		{ "secName": "中度监护区" ,"name": "大黑妞" ,"wound": 44,"heal": 33,"total": 4 },
+		{ "secName": "轻度监护区" ,"name": "大姐" ,"wound": 55,"heal": 33,"total": 5 },
+		{ "secName": "中度监护区" ,"name": "小大姐" ,"wound": 55,"heal": 33,"total": 5 },
+		{ "secName": "轻度监护区" ,"name": "小眼睛" ,"wound": 55,"heal": 33,"total": 5 },
+	],
+}

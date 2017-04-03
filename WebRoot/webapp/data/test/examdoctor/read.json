@@ -1,0 +1,8 @@
+{
+	"success": true,
+	"total": 1,
+	"results": [
+		{ "id": 1, "loginName": "doc1", "password": "doc1", "userName": "华佗", "sector": "重症监护区" }
+
+	],
+}

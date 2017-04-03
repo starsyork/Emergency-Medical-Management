@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 3,
+	"results": [
+		{ "id": 1, "loginName": "volunteer1", "password": "volunteer1", "userName": "op", "sector": "重症监护区" },
+		{ "id": 2, "loginName": "volunteer2", "password": "volunteer1", "userName": "opp", "sector": "中度监护区" },
+		{ "id": 3, "loginName": "volunteer3", "password": "volunteer1", "userName": "oppp", "sector": "轻度监护区" },
+	],
+}

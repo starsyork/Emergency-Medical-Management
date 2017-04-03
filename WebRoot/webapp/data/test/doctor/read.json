@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 3,
+	"results": [
+		{ "id": 1, "loginName": "doc1", "password": "doc1", "userName": "华佗", "sector": "重症监护区" },
+		{ "id": 2, "loginName": "doc2", "password": "doc2", "userName": "神牧", "sector": "中度监护区" },
+		{ "id": 3, "loginName": "doc3", "password": "doc3", "userName": "戒律牧", "sector": "轻度监护区" },
+	],
+}

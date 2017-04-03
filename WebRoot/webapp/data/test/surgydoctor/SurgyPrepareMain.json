@@ -1,0 +1,10 @@
+{
+	"success": true,
+	"total": 1,
+	"results": [
+	{"id": 1,"name": "张三","sex": "男","age": "27","kb": "外科","bed": "df001","surgyname":"fg","surgyid":"S008",
+				"inspectNumber": "JC0251","inspectDoc": "赵医生","note": "暂无","date": "2015/12/16 12:21:20","verifier": "王五"},
+	{"id": 2,"name": "张三1","sex": "男","age": "27","kb": "外科","bed": "df001","surgyname":"f3g","surgyid":"S168",
+				"inspectNumber": "JC0221","inspectDoc": "赵医生","note": "暂无1","date": "2014/12/16 12:21:20","verifier": "王五"}
+	]
+}

@@ -1,0 +1,4 @@
+{
+	"success": true,
+	"results": [{"id":288,"name":"zhang","sex":"男","rfid":"66","age":18,"bedNum":189,"woundType":"外伤", "woundTime":"2013-04-24 15:22:37","woundAddr":"学校","isNewPt": true }],
+}

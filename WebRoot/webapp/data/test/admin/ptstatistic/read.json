@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 3,
+	"results": [
+		{ "secName": "重症监护区" ,"machine": 3,"pressasphyxia": 3,"hunger": 3,"drowning": 3,"burn": 3,"coldinjury": 3,"poisoning": 3,"total": 21 },
+		{ "secName": "中度监护区" ,"machine": 4,"pressasphyxia": 3,"hunger": 3,"drowning": 3,"burn": 3,"coldinjury": 3,"poisoning": 3,"total": 22 },
+		{ "secName": "轻度监护区" ,"machine": 5,"pressasphyxia": 3,"hunger": 3,"drowning": 3,"burn": 3,"coldinjury": 3,"poisoning": 3,"total": 23 },
+	],
+}

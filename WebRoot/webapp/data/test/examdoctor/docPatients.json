@@ -1,0 +1,16 @@
+{
+	"success": true,
+	"total": 10,
+	"results": [
+		{ "id": 1, "name": "咚咚锵", "sex": "女", "rfid": "201310203", "age": 24, "bedNum": 1, "woundType": "外伤1", "woundTime": "2013/03/11 10:52", "woundAddr": "地下室","docName":"张三","examptsec":"轻度","surgyptsec":"轻度"},
+		{ "id": 2, "name": "卡卡西", "sex": "女", "rfid": "201310204", "age": 25, "bedNum": 2, "woundType": "机械性外伤1", "woundTime": "2012/03/12 10:52", "woundAddr": "地下室","docName":"李四","examptsec":"轻度","surgyptsec":"轻度"},
+		{ "id": 3, "name": "乔帮主", "sex": "男", "rfid": "201310205", "age": 34, "bedNum": 3, "woundType": "机械性外伤2", "woundTime": "2011/03/12 10:52", "woundAddr": "地下室","docName":"王五","examptsec":"轻度","surgyptsec":"轻度" },
+		{ "id": 4, "name": "比尔盖", "sex": "女", "rfid": "201310206", "age": 28, "bedNum": 4, "woundType": "机械性外伤3", "woundTime": "2014/03/12 10:52", "woundAddr": "地下室","docName":"李世乭","examptsec":"轻度","surgyptsec":"轻度"},
+		{ "id": 5, "name": "王五", "sex": "男", "rfid": "201310207", "age": 39, "bedNum": 5, "woundType": "机械性外伤4", "woundTime": "2013/05/12 10:52", "woundAddr": "地下室","docName":"张三三","examptsec":"中度","surgyptsec":"中度"},
+		{ "id": 6, "name": "云风", "sex": "男", "rfid": "201310208", "age": 34, "bedNum": 6, "woundType": "机械性外伤5", "woundTime": "2013/06/12 10:52", "woundAddr": "地下室","docName":"陈飒","examptsec":"重度","surgyptsec":"重度"},
+		{ "id": 7, "name": "卡马乔", "sex": "男", "rfid": "201310209", "age": 47, "bedNum": 7, "woundType": "机械性外伤6", "woundTime": "2016/03/12 10:52", "woundAddr": "地下室","docName":"李思","examptsec":"轻度","surgyptsec":"轻度"},
+		{ "id": 8, "name": "拉里", "sex": "男", "rfid": "201310210", "age": 20, "bedNum": 8, "woundType": "外伤1", "woundTime": "2012/03/12 12:52", "woundAddr": "地下室","docName":"王师傅","examptsec":"中度","surgyptsec":"中度"},
+		{ "id": 9, "name": "佩奇", "sex": "女", "rfid": "201310211", "age": 34, "bedNum": 9, "woundType": "机械性外伤7", "woundTime": "2014/03/12 10:56", "woundAddr": "地下室","docName":"王俊杰","examptsec":"轻度","surgyptsec":"轻度"},
+		{ "id": 10, "name": "扎克伯", "sex": "男", "rfid": "201310212", "age": 29, "bedNum": 10, "woundType": "机械性外伤8", "woundTime": "2013/07/12 10:52", "woundAddr": "地下室","docName":"李时","examptsec":"重度","surgyptsec":"重度"},
+	],
+}

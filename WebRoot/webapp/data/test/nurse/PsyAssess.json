@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 2,
+	"results": [
+		{ "id": 1, "sec": "重度分区", "name": "李四", "nowpsy": "良好", "noteperson": "李时","date": "2013/01/20 03:20" },
+		{ "id": 2, "sec": "轻度分区", "name": "张三", "nowpsy": "良好", "noteperson": "张时","date": "2013/01/20 03:20" }
+		
+	],
+}

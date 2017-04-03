@@ -1,0 +1,1621 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 指定Struts 2默认的ObjectFactory Bean，该属性默认值是spring -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!--
+		该属性指定整合Spring框架时，是否缓存Bean实例，该属性只允许使用true和false两个属性值，它的默认值是true。通常不建议修改该属性值
+	-->
+	<constant name="struts.objectFactory.spring.useClassCache"
+		value="true" />
+	<!-- 上传文件大小限制 10M -->
+	<constant name="struts.multipart.maxSize" value="10485760" />
+	<!-- 将错误消息转换成中文的文件，也称为国际化.我就直接放置在src目录下所以value不带包名 -->
+	<constant name="struts.custom.i18n.resources" value="messages_zh_CN" />
+	<!--
+		指定spring框架的装配模式装配方式有: name, type, auto, and constructor (name 是默认装配模式)
+	-->
+
+	<constant name="struts.objectFactory.spring.autoWire" value="name"></constant>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+
+	<package name="default" namespace="/" extends="json-default">
+		<default-action-ref name="go"></default-action-ref>
+		<action name="go" class="com.cecwj.action.LoginAction" method="go">
+			<result name="OK">
+				webapp/index.htm
+			</result>
+		</action>
+		<action name="getVcodeNew" class="com.cecwj.action.LoginAction"
+			method="getVcodeNew">
+
+		</action>
+
+		<action name="login" class="com.cecwj.action.LoginAction"
+			method="login">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+		<action name="loginPhone" class="com.cecwj.action.LoginAction"
+			method="loginPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		<action name="loginPhoneAll" class="com.cecwj.action.LoginAction"
+			method="loginPhoneAll">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+	</package>
+<package name="hospital" namespace="/" extends="json-default">
+		<action name="getAllHospital" class="com.cecwj.action.HospitalAction"
+			method="getAllHospital">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="addHospital" class="com.cecwj.action.HospitalAction"
+			method="addHospital">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="deleteHospital" class="com.cecwj.action.HospitalAction"
+			method="deleteHospital">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>		
+				<action name="modifyHosptail" class="com.cecwj.action.HospitalAction"
+			method="modifyHosptail">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>			
+</package>
+	<package name="sector" namespace="/" extends="json-default">
+		<action name="getAllSection" class="com.cecwj.action.SectionAction"
+			method="getAllSection">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="addSection" class="com.cecwj.action.SectionAction"
+			method="addSection">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="deleteSection" class="com.cecwj.action.SectionAction"
+			method="deleteSection">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="modifySector" class="com.cecwj.action.SectionAction"
+			method="modifySector">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+	</package>
+
+	
+	<package name="usermanager" namespace="/" extends="json-default">
+
+		<action name="getUser" class="com.cecwj.action.UserAction"
+			method="getUser">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getDoctor" class="com.cecwj.action.UserAction"
+			method="getDoctor">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getNurse" class="com.cecwj.action.UserAction"
+			method="getNurse">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		
+		
+		
+		
+		
+		<action name="getAllVolunteer" class="com.cecwj.action.UserAction"
+			method="getAllVolunteer">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="getAllVolunteerA" class="com.cecwj.action.UserAction"
+			method="getAllVolunteerA">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+	    <action name="getundVolunteer" class="com.cecwj.action.UserAction"
+			method="getundVolunteer">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+	
+		<action name="getFirstPatientTime" class="com.cecwj.action.UserAction"
+			method="getFirstPatientTime">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>	
+				<action name="getRTSta" class="com.cecwj.action.UserAction"
+			method="getRTSta">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>	
+		<action name="addVolunteer" class="com.cecwj.action.UserAction"
+			method="addVolunteer">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="deleteVolunteer" class="com.cecwj.action.UserAction"
+			method="deleteVolunteer">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+
+
+
+
+		<action name="addDoctor" class="com.cecwj.action.UserAction"
+			method="addDoctor">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="addNurse" class="com.cecwj.action.UserAction"
+			method="addNurse">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="deleteNurse" class="com.cecwj.action.UserAction"
+			method="deleteNurse">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="deleteDoctor" class="com.cecwj.action.UserAction"
+			method="deleteDoctor">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="modify" class="com.cecwj.action.UserAction"
+			method="modify">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="modifyUser" class="com.cecwj.action.UserAction"
+			method="modifyUser">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="modifyVolunteerA" class="com.cecwj.action.UserAction"
+			method="modifyVolunteerA">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="getDoctorBySid" class="com.cecwj.action.UserAction"
+			method="getDoctorBySid">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="pcondition" namespace="/pcondition" extends="json-default">
+		<action name="addPCondition" class="com.cecwj.action.PConditionAction"
+			method="addPCondition">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="addPConditionPhone" class="com.cecwj.action.PConditionAction"
+			method="addPConditionPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPConditions" class="com.cecwj.action.PConditionAction"
+			method="getPConditions">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+
+		<action name="updatePCondition" class="com.cecwj.action.PConditionAction"
+			method="updatePCondition">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPConditionsPhone" class="com.cecwj.action.PConditionAction"
+			method="getPConditionsPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPConditionById" class="com.cecwj.action.PConditionAction"
+			method="getPConditionById">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPConditionByIdPhone" class="com.cecwj.action.PConditionAction"
+			method="getPConditionByIdPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+	</package>
+
+
+
+
+	<package name="handler" namespace="/" extends="json-default">
+		<action name="addHandler" class="com.cecwj.action.HandlerAction"
+			method="addHandler">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getHandlers" class="com.cecwj.action.HandlerAction"
+			method="getHandlers">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+	</package>
+
+
+		<package name="bed" namespace="/" extends="json-default">
+		<action name="getBeds" class="com.cecwj.action.BedAction"
+			method="getBeds">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getBedsWeb" class="com.cecwj.action.BedAction"
+			method="getBedsWeb">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getUnAllocBed" class="com.cecwj.action.BedAction"
+			method="getUnAllocBed">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="allocBed" class="com.cecwj.action.BedAction"
+			method="allocBed">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="allocBedA" class="com.cecwj.action.BedAction"
+			method="allocBedA">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="modifyStatus" class="com.cecwj.action.BedAction"
+			method="modifyStatus">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+
+		<action name="getBedsPhone" class="com.cecwj.action.BedAction"
+			method="getBedsPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="modifyBed" class="com.cecwj.action.BedAction"
+			method="modifyBed">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getBedsBySid" class="com.cecwj.action.BedAction"
+			method="getBedsBySid">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="addBed" class="com.cecwj.action.BedAction"
+			method="addBed">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="deleteBed" class="com.cecwj.action.BedAction"
+			method="deleteBed">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+
+	</package>
+	<package name="patient" namespace="/" extends="json-default">
+
+		<action name="getDoctorPatient" class="com.cecwj.action.PatientAction"
+			method="getDoctorPatient">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getDoctorPatientPhone" class="com.cecwj.action.PatientAction"
+			method="getDoctorPatientPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getPatientByIdPhone" class="com.cecwj.action.PatientAction"
+			method="getPatientByIdPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getNursePatient" class="com.cecwj.action.PatientAction"
+			method="getNursePatient">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="getPatientUndealt" class="com.cecwj.action.PatientAction"
+			method="getPatientUndealt">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getPatientUndealtA" class="com.cecwj.action.PatientAction"
+			method="getPatientUndealtA">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="testUndealt" class="com.cecwj.action.PatientAction"
+			method="testUndealt">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="testUndealtPhone" class="com.cecwj.action.PatientAction"
+			method="testUndealtPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="removePatient" class="com.cecwj.action.PatientAction"
+			method="removePatient">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPatientPhone" class="com.cecwj.action.PatientAction"
+			method="getPatientPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPatientDetail" class="com.cecwj.action.PatientAction"
+			method="getPatientDetail">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPatientUndealtPhone" class="com.cecwj.action.PatientAction"
+			method="getPatientUndealtPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+
+		</action>
+
+		<action name="getAllUndealt" class="com.cecwj.action.PatientAction"
+			method="getAllUndealt">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="addTriage" class="com.cecwj.action.PatientAction"
+			method="addTriage">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getPatientStatis" class="com.cecwj.action.PatientAction"
+			method="getPatientStatis">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="getDocterStatis" class="com.cecwj.action.PatientAction"
+			method="getDocterStatis">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+		<action name="testDoctorNewPatient" class="com.cecwj.action.PatientAction"
+			method="testDoctorNewPatient">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+
+		<action name="getDoctorNewPatient" class="com.cecwj.action.PatientAction"
+			method="getDoctorNewPatient">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="getDoctorNewPatientPhone" class="com.cecwj.action.PatientAction"
+			method="getDoctorNewPatientPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+
+		<action name="testConDoctorNewPatient" class="com.cecwj.action.PatientAction"
+			method="testConDoctorNewPatient">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+		<action name="ConDoctorNewPt" class="com.cecwj.action.PatientAction"
+			method="ConDoctorNewPt">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action>
+
+	</package>
+
+	<package name="docAdvice" namespace="/" extends="json-default">
+
+		<action name="getDocAdviceByPid" class="com.cecwj.action.DocAdviceAction"
+			method="getDocAdviceByPid">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		<action name="getDocAdviceByPidPhone" class="com.cecwj.action.DocAdviceAction"
+			method="getDocAdviceByPidPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+		<action name="getDocAdviceById" class="com.cecwj.action.DocAdviceAction"
+			method="getDocAdviceById">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+		<action name="getDocAdviceByIdPhone" class="com.cecwj.action.DocAdviceAction"
+			method="getDocAdviceByIdPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+		<action name="deleteDocAdvice" class="com.cecwj.action.DocAdviceAction"
+			method="deleteDocAdvice">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="editDocAdvice" class="com.cecwj.action.DocAdviceAction"
+			method="editDocAdvice">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		<action name="editDocAdvicePhone" class="com.cecwj.action.DocAdviceAction"
+			method="editDocAdvicePhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="addDocAdvice" class="com.cecwj.action.DocAdviceAction"
+			method="addDocAdvice">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		<action name="addDocAdvicePhone" class="com.cecwj.action.DocAdviceAction"
+			method="addDocAdvicePhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		<action name="stopDocAdvice" class="com.cecwj.action.DocAdviceAction"
+			method="stopDocAdvice">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		<action name="stopDocAdvicePhone" class="com.cecwj.action.DocAdviceAction"
+			method="stopDocAdvicePhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="testNewAdvice" class="com.cecwj.action.DocAdviceAction"
+			method="testNewAdvice">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="testNewAdvicePhone" class="com.cecwj.action.DocAdviceAction"
+			method="testNewAdvicePhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getNewDocAdvice" class="com.cecwj.action.DocAdviceAction"
+			method="getNewDocAdvice">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+		<action name="testConDocAdvice" class="com.cecwj.action.DocAdviceAction"
+			method="testConDocAdvice">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="testConDocAdvicePhone" class="com.cecwj.action.DocAdviceAction"
+			method="testConDocAdvicePhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+	</package>
+
+	<package name="disProcess" namespace="/" extends="json-default">
+
+		<action name="getDisProcessByPid" class="com.cecwj.action.DisProcessAction"
+			method="getDisProcessByPid">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getDisProcessByIdPhone" class="com.cecwj.action.DisProcessAction"
+			method="getDisProcessByIdPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getDisProcessByPidPhone" class="com.cecwj.action.DisProcessAction"
+			method="getDisProcessByPidPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="deleteDisProcess" class="com.cecwj.action.DisProcessAction"
+			method="deleteDisProcess">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="editDisProcess" class="com.cecwj.action.DisProcessAction"
+			method="editDisProcess">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+        
+        <action name="editDisProcessPhone" class="com.cecwj.action.DisProcessAction"
+			method="editDisProcessPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+        
+		<action name="addDisProcess" class="com.cecwj.action.DisProcessAction"
+			method="addDisProcess">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="addDisProcessPhone" class="com.cecwj.action.DisProcessAction"
+			method="addDisProcessPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+	</package>
+
+	<package name="disposal" namespace="/" extends="json-default">
+
+		<action name="getDisposals" class="com.cecwj.action.DisposalAction"
+			method="getDisposals">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+
+		<action name="addDisposal" class="com.cecwj.action.DisposalAction"
+			method="addDisposal">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getDisposalsPhone" class="com.cecwj.action.DisposalAction"
+			method="getDisposalsPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="injury" namespace="/" extends="json-default">
+
+		<action name="getInjury" class="com.cecwj.action.DisposalAction"
+			method="getInjury">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+
+	</package>
+
+	<package name="examination" namespace="/" extends="json-default">
+
+		<action name="getExaminationMain" class="com.cecwj.action.ExaminationMainAction"
+			method="getExaminationMain">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+		<action name="getExaminationMainPhone" class="com.cecwj.action.ExaminationMainAction"
+			method="getExaminationMainPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+
+	</package>
+
+	<package name="edetail" namespace="/" extends="json-default">
+
+		<action name="getEdetail" class="com.cecwj.action.EdetailAction"
+			method="getEdetail">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		<action name="UpdataEdetail" class="com.cecwj.action.EdetailAction"
+			method="UpdataEdetail">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+	</package>
+
+	<package name="term" namespace="/" extends="json-default">
+
+		<action name="getTerms" class="com.cecwj.action.TermAction"
+			method="getTerms">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+		
+		 <action name="getUnit" class="com.cecwj.action.TermAction"
+			method="getUnit">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>			
+		</action> 
+		
+		 <action name="getAllDrug" class="com.cecwj.action.TermAction"
+			method="getAllDrug">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action> 	
+		<action name="getAllDrugA" class="com.cecwj.action.TermAction"
+			method="getAllDrugA">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action> 	
+		
+		<action name="UpdataDrug" class="com.cecwj.action.TermAction"
+			method="UpdataDrug">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action> 	
+		
+		<action name="DeleteDrug" class="com.cecwj.action.TermAction"
+			method="DeleteDrug">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action> 	
+		<action name="AddDrug" class="com.cecwj.action.TermAction"
+			method="AddDrug">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+			</result>
+		</action> 			
+		
+	</package>
+
+
+	<package name="userLocation" namespace="/" extends="json-default">
+
+		<action name="addLocation" class="com.cecwj.action.LocationAction"
+			method="addLocation">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+		<action name="getNewLocation" class="com.cecwj.action.LocationAction"
+			method="getNewLocation">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action>
+
+
+			
+    <action name="getUserByDeviceId" class="com.cecwj.action.LocationAction"
+			method="getUserByDeviceId">
+			<result name="OK" type="json">
+				<param name="root">
+					result 
+				</param>
+
+			</result>
+		</action> 
+		
+	</package>
+	
+	<package name="Epidemic" namespace="/" extends="json-default">
+		<action name="AddEpidemic" class="com.cecwj.action.EpidemicAction"
+			method="AddEpidemic">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="UpdataEpidemic" class="com.cecwj.action.EpidemicAction"
+			method="UpdataEpidemic">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getEpidemic" class="com.cecwj.action.EpidemicAction"
+			method="getEpidemic">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="deleteEpidemic" class="com.cecwj.action.EpidemicAction"
+			method="deleteEpidemic">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+	
+	</package>
+	
+	
+	
+	<!--检查检验申请 -->
+	
+	<package name="apply" namespace="/" extends="json-default">
+		<!--根据病人ID获取申请-->
+		<action name="getApplyByPid" class="com.cecwj.action.ApplyAction"
+			method="getApplyByPid">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getApplyByStatus" class="com.cecwj.action.ApplyAction"
+			method="getApplyByStatus">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>		
+		<action name="getOpsApply" class="com.cecwj.action.ApplyAction"
+			method="getOpsApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getTransportApply" class="com.cecwj.action.ApplyAction"
+			method="getTransportApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getMyTransportApply" class="com.cecwj.action.ApplyAction"
+			method="getMyTransportApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getSurgyApply" class="com.cecwj.action.ApplyAction"
+			method="getSurgyApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		<action name="AddApply" class="com.cecwj.action.ApplyAction"
+			method="AddApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="AddApplyPhone" class="com.cecwj.action.ApplyAction"
+			method="AddApplyPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>			
+		<action name="getNewSurgyPt" class="com.cecwj.action.ApplyAction"
+			method="getNewSurgyPt">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="SurgyNewPt" class="com.cecwj.action.ApplyAction"
+			method="SurgyNewPt">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="ConfirmSurgyNewPt" class="com.cecwj.action.ApplyAction"
+			method="ConfirmSurgyNewPt">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>			
+		<action name="getNewInspectionPt" class="com.cecwj.action.ApplyAction"
+			method="getNewInspectionPt">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+				<action name="ExamNewPt" class="com.cecwj.action.ApplyAction"
+			method="ExamNewPt">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="ConfirmExamNewPt" class="com.cecwj.action.ApplyAction"
+			method="ConfirmExamNewPt">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		<action name="ReceviceTransport" class="com.cecwj.action.ApplyAction"
+			method="ReceviceTransport">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+			<action name="editTransport" class="com.cecwj.action.ApplyAction"
+			method="editTransport">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="SubmitTransport" class="com.cecwj.action.ApplyAction"
+			method="SubmitTransport">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		
+		<!--    5.13M   -->	
+		<action name="getExamApply" class="com.cecwj.action.ApplyAction"
+			method="getExamApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		
+		<action name="getAllExamApply" class="com.cecwj.action.ApplyAction"
+			method="getAllExamApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getInspectApply" class="com.cecwj.action.ApplyAction"
+			method="getInspectApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		
+		<action name="getAllInspectApply" class="com.cecwj.action.ApplyAction"
+			method="getAllInspectApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getOperationApply" class="com.cecwj.action.ApplyAction"
+			method="getOperationApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		
+		<action name="getAllOperationApply" class="com.cecwj.action.ApplyAction"
+			method="getAllOperationApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+				<action name="SubmitOperation" class="com.cecwj.action.ApplyAction"
+			method="SubmitOperation">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		
+					
+		<action name="getTransApply" class="com.cecwj.action.ApplyAction"
+			method="getTransApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		
+		<action name="getAllTransApply" class="com.cecwj.action.ApplyAction"
+			method="getAllTransApply">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		
+		
+	</package>	
+	
+	<!---->
+
+	
+   
+<!--    检查     -->
+	
+		<package name="inspect" namespace="/" extends="json-default">
+		<!--编辑检查报告-->
+ 		<action name="editInspect" class="com.cecwj.action.InspectAction"
+			method="editInspect">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		
+		
+		<action name="deleteImg" class="com.cecwj.action.InspectAction"
+			method="deleteImg">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		</package>	
+<!--    术前准备     -->
+	
+		<package name="preparation" namespace="/" extends="json-default">
+		<!--添加准备-->
+ 		<action name="AddPreparation" class="com.cecwj.action.PreparationAction"
+			method="AddPreparation">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		
+		<!--获取准备-->
+		<action name="getPreparation" class="com.cecwj.action.PreparationAction"
+			method="getPreparation">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		</package>	
+<!--    志愿者任务     -->
+	
+ 	<package name="task" namespace="/" extends="json-default">
+<!--获取任务-->
+ 		<action name="getTask" class="com.cecwj.action.TaskAction"
+			method="getTask">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--添加任务-->
+		<action name="addTask" class="com.cecwj.action.TaskAction"
+			method="addTask">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="addTaskPhone" class="com.cecwj.action.TaskAction"
+			method="addTaskPhone">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--删除任务-->
+		<action name="deleteTask" class="com.cecwj.action.TaskAction"
+			method="deleteTask">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--编辑任务-->
+		<action name="edtailTask" class="com.cecwj.action.TaskAction"
+			method="edtailTask">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>		
+		<action name="ReceivedTask" class="com.cecwj.action.TaskAction"
+			method="ReceivedTask">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+		<action name="SubmitTask" class="com.cecwj.action.TaskAction"
+			method="SubmitTask">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		<action name="getTaskByVid" class="com.cecwj.action.TaskAction"
+			method="getTaskByVid">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+		
+		
+		
+		
+	</package>	
+<!--    心理评估     -->
+		
+ 	<package name="psychology" namespace="/" extends="json-default">
+<!--获取心理评估 -->
+ 		<action name="getPsychology" class="com.cecwj.action.PsychologyAction"
+			method="getPsychology">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--添加心理评估 -->
+		<action name="addPsychology" class="com.cecwj.action.PsychologyAction"
+			method="addPsychology">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--删除心理评估 -->
+		<action name="deletePsychology" class="com.cecwj.action.PsychologyAction"
+			method="deletePsychology">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--编辑心理评估 -->
+		<action name="updatePsychology" class="com.cecwj.action.PsychologyAction"
+			method="updatePsychology">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+	</package>	
+		
+<!--    交接班     -->		
+ 	<package name="duty" namespace="/" extends="json-default">
+<!--获取交接班    -->
+ 		<action name="addDuty" class="com.cecwj.action.DutyAction"
+			method="addDuty">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--添加交接班     -->
+		<action name="getDuty" class="com.cecwj.action.DutyAction"
+			method="getDuty">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--删除交接班     -->
+		<action name="deleteDuty" class="com.cecwj.action.DutyAction"
+			method="deleteDuty">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+<!--编辑交接班     -->
+		<action name="updateDuty" class="com.cecwj.action.DutyAction"
+			method="updateDuty">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+	</package>		
+	
+		<package name="word" namespace="/" extends="json-default">
+		<action name="word" class="com.cecwj.action.WordAction"
+			method="sdfk">
+			<result name="OK" type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>	
+	</package>				
+</struts>
+	

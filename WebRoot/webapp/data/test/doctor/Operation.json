@@ -1,0 +1,7 @@
+{
+	"success": true,
+	"total": 1,
+	"results": [
+		{ "id": 6,    "ptname":"小花",   "doctor":"李医生",   "ptid": "2",   "date": "2013/01/20 03:20",   "state":"未完成",   "content":"骨折修复",   "spec":"病人O型血"  }
+            ]
+}

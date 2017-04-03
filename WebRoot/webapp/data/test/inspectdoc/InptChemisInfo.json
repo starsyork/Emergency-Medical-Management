@@ -1,0 +1,12 @@
+{
+	"success": true,
+	"total": 5,
+	"results": [
+		{ "id": 1, "chemisType": "体温","chemisResult":"36","chemisFlag":"f","refScope":"50-60","chemisUnit":"C","chemisLHN":"L","chemisDoc":"李","chemisTime": "2013/10/12 03:35" },
+		{ "id": 2, "chemisType": "呼吸","chemisResult":"100","chemisFlag":"f","refScope":"40-150","chemisUnit":"d","chemisLHN":"H","chemisDoc":"李","chemisTime": "2013/10/12 03:35" },
+		{ "id": 3, "chemisType": "脉搏","chemisResult":"110","chemisFlag":"s","refScope":"90-120","chemisUnit":"g","chemisLHN":"H","chemisDoc":"李","chemisTime": "2013/10/12 03:35" },
+		{ "id": 4, "chemisType": "血压","chemisResult":"70/120","chemisFlag":"f","refScope":"60-140","chemisUnit":"ff","chemisLHN":"H","chemisDoc":"李","chemisTime": "2013/10/12 03:35" },
+		{ "id": 5, "chemisType": "gh","chemisResult":"78","chemisFlag":"f","refScope":"10-100","chemisUnit":"ffs","chemisLHN":"K","chemisDoc":"李","chemisTime": "2013/10/12 03:35" },
+
+	],
+}

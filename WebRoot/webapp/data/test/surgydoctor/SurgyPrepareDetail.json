@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 10,
+	"results": [
+	{"id":"1","drugtype":"麻醉","drugname":"麻醉剂1","drugnum":"100ml","surgyname":"fg","surgyid":"S008","noteperson":"张瑞文"},
+	{"id":"2","drugtype":"手术","drugname":"绷带","drugnum":"10米","surgyname":"fg","surgyid":"S008","noteperson":"张瑞文"}
+
+	]
+}

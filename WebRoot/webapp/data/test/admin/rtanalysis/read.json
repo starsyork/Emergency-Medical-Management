@@ -1,0 +1,12 @@
+{
+	"success": true,
+	"total": 5,
+	"results": [
+		{"id":1,"LInjNum":10,"MInjNum": 5, "SInjNum": 20, "Death": 10,"TotalDeIn":45,"Date":"2011/05/06"},
+		{"id":2,"LInjNum":50,"MInjNum": 30, "SInjNum": 39, "Death": 55,"TotalDeIn":174,"Date":"2011/05/07"},
+		{"id":3,"LInjNum":100,"MInjNum": 60, "SInjNum": 90, "Death": 79,"TotalDeIn":329,"Date":"2011/05/08"},
+		{"id":4,"LInjNum":150,"MInjNum": 100, "SInjNum": 180, "Death": 95,"TotalDeIn":525,"Date":"2011/05/09"},
+		{"id":5,"LInjNum":70,"MInjNum": 68, "SInjNum": 20, "Death": 60,"TotalDeIn":218,"Date":"2011/05/10"},
+		
+	],
+}

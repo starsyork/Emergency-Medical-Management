@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"total": 3,
+	"results": [
+		{ "id": 1, "secName": "重症监护区" },
+		{ "id": 2, "secName": "中度监护区" },
+		{ "id": 3, "secName": "轻度监护区" },
+	],
+}
